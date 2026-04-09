@@ -15,7 +15,7 @@ import jakarta.persistence.Table;
 @Table(name = "tokens")
 public class Token {
 
-    @Id
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -31,4 +31,53 @@ public class Token {
 
     @ManyToOne
     private ServiceEntity service;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public Integer getTokenNumber() {
+		return tokenNumber;
+	}
+
+	public void setTokenNumber(Integer tokenNumber) {
+		this.tokenNumber = tokenNumber;
+	}
+
+	public TokenStatus getStatus() {
+		return status;
+	}
+
+	public void setStatus(TokenStatus status) {
+		this.status = status;
+	}
+
+	public LocalDateTime getCreatedTime() {
+		return createdTime;
+	}
+
+	public void setCreatedTime(LocalDateTime createdTime) {
+		this.createdTime = createdTime;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public ServiceEntity getService() {
+		return service;
+	}
+
+	public void setService(ServiceEntity service) {
+		this.service = service;
+	}
+    
 }

@@ -19,4 +19,37 @@ public class Counter {
 
     @ManyToOne
     private ServiceEntity service;
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public ServiceEntity getService() {
+		return service;
+	}
+
+	public void setService(ServiceEntity service) {
+		this.service = service;
+	}
+
+	public Counter(Long id, String name, ServiceEntity service) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.service = service;
+	}
+    
+    
 }
